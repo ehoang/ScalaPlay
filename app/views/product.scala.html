@@ -1,0 +1,22 @@
+@*
+  Displays details of a content
+
+  @param content A content item
+*@
+
+@(product: Product)
+
+@main("Content ") {
+
+    <ul class="breadcrumb">
+        <li><a href="@controllers.routes.Application.index">Home</a></li>
+        <li><a href="@controllers.routes.Application.filter(product.className)">Products</a></li>
+        <li class="active">@product.name</li>
+    </ul>
+
+  	<h3>@product.name</h3>
+  	<p>UUID: @product.uuid</p>
+  	<p>$@product.price</p>
+  	<p>@product.description</p>
+	<a href="@product.image.large"/><img src="@product.image.thumb" /></a>
+}

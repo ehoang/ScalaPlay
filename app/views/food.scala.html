@@ -1,0 +1,19 @@
+@*
+  Displays details of a content
+
+  @param content A content item
+*@
+
+@(food: Food)
+
+@main("Content ") {
+    <ul class="breadcrumb">
+        <li><a href="@controllers.routes.Application.index">Home</a></li>
+        <li><a href="@controllers.routes.Application.filter(food.className)">Food</a></li>
+        <li class="active">@food.name</li>
+    </ul>
+
+  	<h3>@food.name</h3>
+  	<p>@food.description</p>
+	<a href="@food.image.large"/><img src="@food.image.thumb" /></a>
+}

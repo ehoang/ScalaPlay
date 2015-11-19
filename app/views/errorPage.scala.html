@@ -1,0 +1,8 @@
+@(error: Throwable)
+
+@main("Content Library") {
+	<p style="font-size: 5em;"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></p>
+	<p>@error</p>
+	
+	<p><a href="@controllers.routes.Application.index"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Return home</a></p>
+}
